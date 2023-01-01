@@ -159,7 +159,7 @@ class _ProductPageState extends State<ProductPage> {
                           ),
                           onRatingUpdate: (rating) async {
                             await products.doc(widget.productid).update({
-                              "rating": rating,
+                              "rating": rating.toInt(),
                             });
                           },
                         ),
